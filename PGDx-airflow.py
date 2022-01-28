@@ -1,6 +1,5 @@
 import datetime
 import os
-from sqlite3 import complete_statement
 import time
 import sys
 import warnings
@@ -28,7 +27,8 @@ if __name__ == "__main__":
             if time_dif < input_duration:  # <- 8 usually
                 process.pgdx_main(batch_dir, req_dir)
     # if not, process latest batch only
-    except:
+    except Exception as e:
+        print(e)
         dirs = [os.path.join(elio_dir, dir) for dir in os.listdir(elio_dir)]
         batch_dir = max(dirs, key=os.path.getctime)
         process.pgdx_main(batch_dir, req_dir)

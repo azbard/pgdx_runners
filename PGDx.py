@@ -32,5 +32,5 @@ if __name__ == "__main__":
                 batch_dir = os.path.join(elio_dir, batch_dir_name)
                 break
 
-    process.pgdx_main(batch_dir, req_dir)
+    process.pgdx_process(batch_dir, req_dir)
 
