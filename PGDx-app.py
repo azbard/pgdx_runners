@@ -1,5 +1,5 @@
 import os
-from pgdx_reporting import pgdx_process
+from pgdx_reporting.process import pgdx_process
 
 
 if __name__ == "__main__":
